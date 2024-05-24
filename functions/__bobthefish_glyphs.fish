@@ -101,4 +101,6 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
     set git_untracked_glyph '...'
     set fossil_glyph '' # blank, for lack of a good fallback
   end
+
+  set -x wodden_folder      \uF148 #E5FE #f148
 end
