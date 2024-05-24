@@ -632,8 +632,8 @@ function __bobthefish_prompt_k8s_context -S -d 'Show current Kubernetes context'
     [ "$theme_display_k8s_namespace" = 'yes' ]
     and set -l namespace (__bobthefish_k8s_namespace)
 
-    [ -z "$context" -o "$context" = 'default' ]
-    and [ -z "$namespace" -o "$namespace" = 'default' ]
+    [ -z $context -o "$context" = 'default' ]
+    and [ -z $namespace -o "$namespace" = 'default' ]
     and return
 
     set -l segment $k8s_glyph ' '
@@ -966,7 +966,7 @@ end
 
 function __bobthefish_prompt_find_file_up -S -d 'Find file(s), going up the parent directories'
     set -l dir "$argv[1]"
-    set -l files $argv[2..-1]
+    set -l files "$argv[2..-1]"
 
     if test -z "$dir"
         or test -z "$files"
@@ -1264,6 +1264,16 @@ function __bobthefish_closest_parent -S
     end
 end
 
+#--------------------------
+function __wodenn_prompt_dirstrack -S
+    set -l dirstack_size (dirs | wc -w)
+    if [ $dirstack_size -ne 1 ]
+        #set_color normal
+        __bobthefish_start_segment $color_vi_mode_default
+        #set_color white
+        echo -ns $wodden_folder ' ' $dirstack_size ' '
+    end
+end
 
 # ==============================
 # Apply theme
@@ -1333,6 +1343,9 @@ function fish_prompt -d 'bobthefish, a fish theme optimized for awesome'
         case "$fossil_root_dir"
             __bobthefish_prompt_fossil $fossil_root_dir $real_pwd
     end
+
+    # Size of dirstack, by wo_denn
+    __wodenn_prompt_dirstrack
 
     __bobthefish_finish_segments
 end
