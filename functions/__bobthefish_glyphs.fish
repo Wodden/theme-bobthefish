@@ -93,8 +93,8 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
     # set git_untracked_glyph  \uF141 '' # nf-fa-ellipsis_h
     set fossil_glyph \UF00B9 # nf-md-bone
 
-    set git_ahead_glyph      \uF47B # nf-oct-chevron_up
-    set git_behind_glyph     \uF47C # nf-oct-chevron_down
+    set git_ahead_glyph      \uF47B ' ' # nf-oct-chevron_up
+    set git_behind_glyph     \uF47C ' ' # nf-oct-chevron_down
 
     set git_plus_glyph       \uF0DE # fa-sort-asc
     set git_minus_glyph      \uF0DD # fa-sort-desc
