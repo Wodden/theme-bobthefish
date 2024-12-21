@@ -76,7 +76,7 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
     set nix_glyph        \uF313 ' ' # nf-linux-nixos
 #    set virtualenv_glyph \uE73C ' '
 #    set virtualenv_glyph ''
-    set virtualenv_glyph \uE235
+    set virtualenv_glyph \uE235 ' '
     set ruby_glyph       \uE791 ' '
     set go_glyph         \uE626 ' '
     set node_glyph       \uE718 ' '
