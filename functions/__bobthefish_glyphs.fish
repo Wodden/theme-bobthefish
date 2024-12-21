@@ -16,9 +16,12 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
   set -x hg_glyph                \u263F
 
   # Python glyphs
-  set -x superscript_glyph       \u00B9 \u00B2 \u00B3
+#  set -x superscript_glyph       \u00B9 \u00B2 \u00B3
+  set -x superscript_glyph       '1' '2' '3'
   set -x virtualenv_glyph        \u25F0
+#  set -x virtualenv_glyph        ''
   set -x pypy_glyph              \u1D56
+#  set -x pypy_glyph              ''
 
   set -x ruby_glyph              ''
   set -x go_glyph                ''
@@ -71,7 +74,9 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
     set tag_glyph        \uF412
 
     set nix_glyph        \uF313 ' ' # nf-linux-nixos
-    set virtualenv_glyph \uE73C ' '
+#    set virtualenv_glyph \uE73C ' '
+#    set virtualenv_glyph ''
+    set virtualenv_glyph \uE235
     set ruby_glyph       \uE791 ' '
     set go_glyph         \uE626 ' '
     set node_glyph       \uE718 ' '
