@@ -1266,8 +1266,8 @@ end
 
 #--------------------------
 function __wodenn_prompt_dirstrack -S
-    set -l dirstack_size (dirs | wc -w)
-    if [ $dirstack_size -ne 1 ]
+    set -l dirstack_size (count $dirstack)
+    if [ $dirstack_size -gt 0 ]
         #set_color normal
         __bobthefish_start_segment $color_vi_mode_default
         #set_color white
